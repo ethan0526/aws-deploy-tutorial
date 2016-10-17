@@ -14,9 +14,6 @@ apt-add-repository ppa:brightbox/ruby-ng -y
 apt-get update
 apt-get install -y --force-yes ruby2.3 ruby2.3-dev
 
-# 安裝 Bundler gem
-gem install bundler
-
 # 安裝 Nginx + Passenger
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7 -y
 
