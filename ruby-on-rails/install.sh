@@ -44,3 +44,24 @@ apt-get install -y git
 # install bundler
 gem install bundler
 
+echo EOF
+server {
+  listen 80;
+  server_name 52.196.9.32; # 還沒 domain 的話，先填 IP 位置
+
+  root /home/ubuntu/deploy/public;
+  # 如果是自動化部署，位置在 root /home/deploy/your_project_name/current/public;
+
+  passenger_enabled on;
+
+  passenger_min_instances 1;
+
+  location ~ ^/assets/ {
+    expires 1y;
+    add_header Cache-Control public;
+    add_header ETag "";
+    break;
+   }
+}
+EOF >> /etc/nginx/site-enabled/deploy
+
