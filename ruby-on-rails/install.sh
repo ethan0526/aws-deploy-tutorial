@@ -44,7 +44,7 @@ apt-get install -y git
 # install bundler
 gem install bundler
 
-echo EOF
+echo "
 server {
   listen 80;
   server_name 52.196.9.32; # 還沒 domain 的話，先填 IP 位置
@@ -63,5 +63,5 @@ server {
     break;
    }
 }
-EOF >> /etc/nginx/site-enabled/deploy
+" >> /etc/nginx/site-enabled/deploy
 
