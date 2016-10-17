@@ -9,8 +9,8 @@ zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3  autoconf 
 libpcre3-dev curl libcurl4-nss-dev libxml2-dev libxslt-dev imagemagick nodejs libffi-dev
 
 # 用套件快速安裝 Ruby
-apt-get install software-properties-common
-apt-add-repository ppa:brightbox/ruby-ng
+apt-get install -y --force-yes software-properties-common
+apt-add-repository ppa:brightbox/ruby-ng -y
 apt-get update
 apt-get install ruby2.3 ruby2.3-dev
 
