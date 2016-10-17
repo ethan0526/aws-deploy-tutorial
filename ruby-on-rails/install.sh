@@ -18,7 +18,7 @@ apt-get install -y --force-yes ruby2.3 ruby2.3-dev
 gem install bundler
 
 # 安裝 Nginx + Passenger
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7 -y
 
 apt-get install -y --force-yes apt-transport-https ca-certificates
 
