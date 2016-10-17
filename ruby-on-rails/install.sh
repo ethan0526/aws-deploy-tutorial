@@ -12,7 +12,7 @@ libpcre3-dev curl libcurl4-nss-dev libxml2-dev libxslt-dev imagemagick nodejs li
 apt-get install -y --force-yes software-properties-common
 apt-add-repository ppa:brightbox/ruby-ng -y
 apt-get update
-apt-get install ruby2.3 ruby2.3-dev
+apt-get install -y --force-yes ruby2.3 ruby2.3-dev
 
 # 安裝 Bundler gem
 gem install bundler
@@ -20,7 +20,7 @@ gem install bundler
 # 安裝 Nginx + Passenger
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
 
-apt-get install -y apt-transport-https ca-certificates
+apt-get install -y --force-yes apt-transport-https ca-certificates
 
 # Add our APT repository
 sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger xenial main > /etc/apt/sources.list.d/passenger.list'
@@ -28,7 +28,7 @@ sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger xenial m
 apt-get update
 
 # Install Passenger + Nginx
-apt-get install -y nginx-extras passenger
+apt-get install -y --force-yes nginx-extras passenger
 
 service nginx restart
 
