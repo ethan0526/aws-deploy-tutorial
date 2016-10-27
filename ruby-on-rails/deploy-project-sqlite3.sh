@@ -2,7 +2,7 @@
 cat > /etc/nginx/sites-enabled/project << EOF
 server {
   listen 8080;
-  server_name 52.198.67.81; # 還沒 domain 的話，先填 IP 位置
+  server_name 52.193.77.141; # 還沒 domain 的話，先填 IP 位置
 
   root /home/ubuntu/project/public;
 
