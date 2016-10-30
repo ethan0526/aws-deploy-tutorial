@@ -2,7 +2,7 @@
 cat > /etc/nginx/sites-enabled/project-mysql << EOF
 server {
   listen 80;
-  server_name 172.31.22.41; # 還沒 domain 的話，先填 IP 位置
+  server_name 52.193.77.141; # 還沒 domain 的話，先填 IP 位置
 
   root /home/ubuntu/project-pg/public;
 
