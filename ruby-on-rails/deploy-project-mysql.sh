@@ -2,9 +2,9 @@
 cat > /etc/nginx/sites-enabled/project-mysql << EOF
 server {
   listen 80;
-  server_name 52.193.77.141; # 還沒 domain 的話，先填 IP 位置
+  server_name 172.31.22.41; # 還沒 domain 的話，先填 IP 位置
 
-  root /home/ubuntu/project-mysql/public;
+  root /home/ubuntu/project-pg/public;
 
   passenger_enabled on;
 
@@ -21,8 +21,8 @@ EOF
 
 # deploy project
 cd /home/ubuntu
-git clone https://github.com/ethan0526/rails-mysql.git project-mysql
-cd project-mysql
+git clone https://github.com/ethan0526/rails-pg.git project-pg
+cd project-pg
 
 bundle install --deployment --without test development
 
